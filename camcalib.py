@@ -39,7 +39,7 @@ ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.sh
 print(mtx)
 
 # 去畸变
-img2 = cv2.imread('frames/frame_00004.jpg')
+img2 = cv2.imread(images[0])
 h,  w = img2.shape[:2]
 newcameramtx, roi=cv2.getOptimalNewCameraMatrix(mtx,dist,(w,h),0,(w,h)) # 自由比例参数
 dst = cv2.undistort(img2, mtx, dist, None, newcameramtx)
