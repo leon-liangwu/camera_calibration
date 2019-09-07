@@ -14,7 +14,7 @@ while(success):
 
     if index % 100 == 0:
         id = int(index / 100)
-        # cv2.imwrite("./frames/frame_%05d.jpg" % (id), frame)
+        cv2.imwrite("./frames/frame_%05d.jpg" % (id), frame)
     index += 1
     print(index)
 
